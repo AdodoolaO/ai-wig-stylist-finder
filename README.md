@@ -13,8 +13,9 @@ The AI:
 3. Asks GPT to write a natural reply, suggesting 1–3 stylists with Instagram links
 4. The idea is to make it feel like a friendly human recommendation, not just a database search.
 
-#How to Run It
-node scripts/recommendStylist.js "Looking for a stylist in East London"
+How to Run It:
+
+`node scripts/recommendStylist.js "Looking for a stylist in East London"`
 
 #The Files & What they do:
 
@@ -29,10 +30,13 @@ node scripts/recommendStylist.js "Looking for a stylist in East London"
 
 Tools Used:
 
-OpenAI GPT-4 API: for both extracting location and generating the final stylist recommendation.
-dotenv: to securely load your API key.
-Node.js (v18+): backend environment for running everything.
-Aplify: To scrape stylist data from Instagram 
+OpenAI GPT-4 API- for both extracting location and generating the final stylist recommendation.
+
+dotenv- to securely load your API key.
+
+Node.js (v18+)-  backend environment for running everything.
+
+Aplify- To scrape stylist data from Instagram 
 
 How the Logic Works (Visually):
 
