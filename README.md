@@ -1,4 +1,4 @@
-#AI Agent to find your next Hairstylist in London
+AI Agent to find your next Hairstylist in London
 
 This is a beginner-friendly AI agent that helps people find London-based wig stylists on Instagram based on their location (e.g., “East London”, “South London”).
 
@@ -16,20 +16,26 @@ The AI:
 #How to Run It
 node scripts/recommendStylist.js "Looking for a stylist in East London"
 
-#The Files & What they do
-| `extractIntent.js`     | Uses GPT to figure out **which location** the user is asking about. Returns structured JSON like `{ location: "South London" }`.             |
-| `filterStylists.js`    | Takes that location and searches your stylist dataset (`stylists_merged.json`) for relevant matches based on **location, caption, and bio**. |
-| `recommendStylist.js`  | The “main script” that connects everything. It handles the full flow: user input → GPT intent → stylist filter → GPT response.               |
-| `stylists_merged.json` | Your local “database” of stylists. This includes their bios, usernames, profile links, captions, and posts. All scraped beforehand.          |
+#The Files & What they do:
+
+`extractIntent.js` - Uses GPT to figure out **which location** the user is asking about. Returns structured JSON like `{ location: "South London" }`. 
+
+`filterStylists.js`- Takes that location and searches the stylist dataset (`stylists_merged.json`) for relevant matches based on **location, caption, and bio**. |
+
+`recommendStylist.js`-  The “main script” that connects everything. It handles the full flow: user input → GPT intent → stylist filter → GPT response.    
+
+`stylists_merged.json` - Your local “database” of stylists. This includes their bios, usernames, profile links, captions, and posts. All scraped beforehand.          |
 
 
-#Tools Used
+Tools Used:
+
 OpenAI GPT-4 API: for both extracting location and generating the final stylist recommendation.
 dotenv: to securely load your API key.
 Node.js (v18+): backend environment for running everything.
 Aplify: To scrape stylist data from Instagram 
 
-#How the Logic Works (Visually)
+How the Logic Works (Visually):
+
 User input → extractIntent → filterStylists → generateReply → Output
 GPT understands the user’s location
 
